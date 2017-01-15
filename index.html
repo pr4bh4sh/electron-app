@@ -1,26 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>Electron-app</title>
     <style>
-    h1 {
-      color: red;
-      text-align: center;
-    }
-    </style>
-  </head>
-  <body>
-    <h1>Hello World!!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    <div class="center">We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-    </div>
-  </body>
+        body {
+            min-width: 50em;
+        }
 
-  <script>
+        .left {
+            color: red;
+            text-align: center;
+        }
+
+        .right {
+            color: green;
+            text-align: center;
+        }
+
+        .section {
+            width: 100%;
+            margin: 0px auto 0px auto
+        }
+
+        .image_prev {
+            width: 10%;
+            height: 10%;
+            border: .2em solid red;
+            border-color: black;
+            padding: 2% 2%;
+            margin: 2% 2%;
+            float: left;
+        }
+
+        .break {
+            clear: both;
+        }
+
+        .add-remove {
+            float: right;
+        }
+
+        .section-action {
+            border: .1em solid gray;
+            border-radius: 50%;
+            font-size: 2em;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section id="image_set_1">
+        <image-section id="">
+            <div class="image_1 image_prev">
+
+            </div>
+            <div class="image_2 image_prev">
+
+            </div>
+        </image-section>
+        <div class="break"></div>
+        <button-section id="">
+            <button class="left" type="button" name="button">Old</button>
+            <button class="right" type="button" name="button">New</button>
+        </button-section>
+    </section>
+    <div class="add-remove">
+        <span class="add section-action">+</span>
+        <span class="remove section-action">-</span>
+
+    </div>
+</body>
+
+<script>
     // You can also require other files to run in this process
     require('./renderer.js')
-  </script>
+
+</script>
+
 </html>
